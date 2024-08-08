@@ -14,3 +14,12 @@ document.addEventListener("scroll", () => {
     // header.querySelector(".logo").style.display = "none";
   }
 });
+
+//toggle header menu
+const toggle = document.querySelector("header .menu-toggle");
+const menu = document.querySelector("header");
+toggle.addEventListener("click", (event) => {
+  event.preventDefault();
+  menu.classList.toggle("nav-open");
+});
+
