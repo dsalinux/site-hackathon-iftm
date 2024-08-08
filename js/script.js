@@ -23,3 +23,10 @@ toggle.addEventListener("click", (event) => {
   menu.classList.toggle("nav-open");
 });
 
+
+const navLinks = document.querySelectorAll("header nav a");
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("nav-open");
+  });
+});
