@@ -394,8 +394,8 @@ section.container .flex-column {
 }
 
 .premiacao {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     justify-content: center;
     align-items: center;
@@ -404,6 +404,7 @@ section.container .flex-column {
     padding: 0;
 }
 .premiacao li {
+    height: 100%;
     background-color: rgba(40, 40, 55, 1);
     border: 1px solid var(--accent-color);
     padding: 15px;
@@ -438,22 +439,22 @@ section.container .flex-column {
     opacity: 1;
 }
 .premiacao li:nth-child(1)::before {
-    animation: reflex 12s infinite forwards;
+    animation: reflex 8s infinite forwards;
 }
 .premiacao li:nth-child(2)::before {
-    animation: reflex 12s 1s infinite forwards;
+    animation: reflex 8s 1s infinite forwards;
 }
 .premiacao li:nth-child(3)::before {
-    animation: reflex 12s 2s infinite forwards;
+    animation: reflex 8s 2s infinite forwards;
 }
 @keyframes reflex {
     0% {
         left: -15%;
     }
-    5% {
+    4% {
         left: 115%;
     }
-    5.01% {
+    4.00001% {
         left: -15%;
     }
 }
@@ -527,7 +528,9 @@ footer .logo {
     justify-content: center;
     border-radius: 20px;
     transition: transform 0.2s;
+    
 }
+
 /* .partners .partner:hover {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     transform: scale(1.2);
