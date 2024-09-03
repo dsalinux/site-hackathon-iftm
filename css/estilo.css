@@ -374,7 +374,7 @@ section p {
 }
 section.container .flex-column {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 30px;
 }
 .hacka-sagita {
@@ -415,7 +415,7 @@ section.container .flex-column {
     display: flex;
     flex-direction: column;
     flex: 1;
-    animation: glow 1s infinite alternate;
+    
     position: relative;
 }
 .premiacao li i {
@@ -459,7 +459,58 @@ section.container .flex-column {
     }
 }
 
-
+.teams {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.teams .team {
+    width: 200px;
+    border: 1px solid var(--accent-color);
+    color: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    animation: glow 6s calc(var(--i) / 8) infinite;
+}
+@keyframes glow {
+    0% {
+        box-shadow: inset 0 0 0px var(--accent-color),
+                        0 0 0px var(--accent-color);
+        filter: brightness(1) saturate(1);
+        text-shadow: 0 0 0px var(--accent-color),
+        0 0 0px var(--accent-color),
+        0 0 0px var(--accent-color),
+        0 0 0px var(--accent-color);
+    }
+    50% {
+        box-shadow: inset 0 0 10px var(--accent-color),
+                        0 0 20px -5px var(--accent-color);
+        filter: brightness(1.5) saturate(1.5);
+        text-shadow: 0 0 10px var(--accent-color),
+        0 0 10px var(--accent-color),
+        0 0 20px var(--accent-color),
+        0 0 30px var(--accent-color);
+    }
+    100% {
+        filter: brightness(1) saturate(1);
+        box-shadow: inset 0 0 0px var(--accent-color),
+                        0 0 0px var(--accent-color);
+    }
+}
+.teams .team i {
+    font-size: 2em;
+}
 .buttons-contacts {
     display: flex;
     flex-direction: row;
@@ -531,6 +582,17 @@ footer .logo {
     
 }
 
+.organizers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.organizers .organizer img {
+    border-radius: 50%;
+    width: 200px;
+}
 /* .partners .partner:hover {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     transform: scale(1.2);
@@ -545,7 +607,10 @@ footer .logo {
             ; */
 
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 1200px) {
+    section.container .flex-column {
+        flex-direction: row;
+    }
     section.container .flex-column img {
         max-width: 50%;
     }
@@ -590,9 +655,7 @@ footer .logo {
     .banner {
         height: 50vh;
     }
-    section.container .flex-column {
-        flex-direction: column;
-    }
+    
     section.container .flex-column iframe {
         width: 100%;
     }
