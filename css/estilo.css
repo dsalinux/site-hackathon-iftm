@@ -10,6 +10,10 @@
     background-color: var(--accent-color);
     color: #fff;
 }
+
+.texto-cortado {
+    text-decoration: line-through;
+}
 a {
     color: var(--accent-color);
     filter: brightness(1.5);
