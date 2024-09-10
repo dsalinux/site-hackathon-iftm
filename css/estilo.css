@@ -5,6 +5,7 @@
     --primary-color: #333;
     --secondary-color: #f0f0f0;
     --background-color: #f0f0f0;
+    --mentor-width: 350px;
 }
 ::selection {
     background-color: var(--accent-color);
@@ -515,6 +516,105 @@ section.container .flex-column {
 .teams .team i {
     font-size: 2em;
 }
+
+.mentors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+.mentors .mentor {
+    width: var(--mentor-width);
+    background-color: rgba(40, 40, 55, 1);
+    border: 1px solid var(--accent-color);
+    color: #fff;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+.mentors .mentor img {
+    width: 100%;
+}
+.mentors .mentor .name, .mentors .mentor .activity, .mentors .mentor .bussiness, .mentors .mentor .content {
+    padding: 0 10px;
+}
+.mentors .mentor .name {
+    font-size: 1em;
+    margin: 0;
+}
+.mentors .mentor .bussiness {
+    font-size: 0.8em;
+    margin: 0;
+}
+.mentors .mentor .activity {
+    position: absolute;
+    width: 100%;
+    min-height: 60px;
+    top: var(--mentor-width);
+    transform: translateY(-100%);
+    padding: 10px 0;
+    background-color: rgba(40, 40, 55, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.mentors .mentor .activity span{
+    font-size: 0.7em;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.mentors .mentor .activity .ti {
+    background-color: rgb(53, 84, 129);
+}
+.mentors .mentor .activity .eng {
+    background-color: rgb(30, 73, 24);
+}
+.mentors .mentor .activity .emp {
+    background-color: rgb(129, 53, 53);
+}
+.mentors .mentor .activity .ia {
+    background-color: rgb(129, 102, 53);
+}
+.mentors .mentor .activity .adm {
+    background-color: rgb(86, 53, 129);
+}
+.mentors .mentor .activity .mkt {
+    background-color: rgb(86, 53, 129);
+}
+.mentors .mentor .activity .ux {
+    background-color: rgb(86, 53, 129);
+}
+.mentors .mentor .activity .iot {
+    background-color: rgb(86, 53, 129);
+}
+.mentors .mentor .activity .ds {
+    background-color: rgb(86, 53, 129);
+}
+.mentors .mentor .activity .ai {
+    background-color: rgb(86, 53, 129);
+}
+.mentors .mentor .activity .sm {
+    background-color: rgb(86, 53, 129);
+}
+.mentors .mentor .activity .sust {
+    background-color: rgb(86, 53, 129);
+}
+.mentors .mentor .content {
+    font-size: 0.9em;
+    line-height: 1.6em;
+    text-align: justify;
+    height: 180px;
+    margin-top: 20px;
+    overflow-y: auto;
+}
 .buttons-contacts {
     display: flex;
     flex-direction: row;
@@ -531,7 +631,6 @@ section.container .flex-column {
     display: flex;
     flex-direction: column;
     flex: 1;
-    animation: glow 1s infinite alternate;
 }
 
 .buttons-contacts .button-contact .title {
