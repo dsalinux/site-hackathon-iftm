@@ -572,40 +572,67 @@ section.container .flex-column {
     border-radius: 10px;
 }
 .mentors .mentor .activity .ti {
-    background-color: rgb(53, 84, 129);
+    background-color: rgb(53, 84, 129); /* Azul escuro */
 }
+
 .mentors .mentor .activity .eng {
-    background-color: rgb(30, 73, 24);
+    background-color: rgb(30, 73, 24); /* Verde escuro */
 }
+
 .mentors .mentor .activity .emp {
-    background-color: rgb(129, 53, 53);
+    background-color: rgb(129, 53, 53); /* Vermelho escuro */
 }
+
 .mentors .mentor .activity .ia {
-    background-color: rgb(129, 102, 53);
+    background-color: rgb(129, 102, 53); /* Marrom claro */
 }
+
 .mentors .mentor .activity .adm {
-    background-color: rgb(86, 53, 129);
+    background-color: rgb(86, 53, 129); /* Roxo escuro */
 }
+
 .mentors .mentor .activity .mkt {
-    background-color: rgb(86, 53, 129);
+    background-color: rgb(135, 67, 98); /* Rosa escuro */
 }
+
 .mentors .mentor .activity .ux {
-    background-color: rgb(86, 53, 129);
+    background-color: rgb(70, 55, 124); /* Roxo azulado */
 }
+
 .mentors .mentor .activity .iot {
-    background-color: rgb(86, 53, 129);
+    background-color: rgb(129, 54, 129); /* Roxo médio */
 }
+
 .mentors .mentor .activity .ds {
-    background-color: rgb(86, 53, 129);
+    background-color: rgb(57, 129, 71); /* Verde médio */
 }
+
+.mentors .mentor .activity .rs {
+    background-color: rgb(129, 55, 85); /* Magenta escuro */
+}
+
+.mentors .mentor .activity .edu {
+    background-color: rgb(124, 88, 44); /* Marrom médio */
+}
+
+.mentors .mentor .activity .gp {
+    background-color: rgb(129, 74, 52); /* Laranja escuro */
+}
+
+.mentors .mentor .activity .design {
+    background-color: rgb(105, 57, 129); /* Roxo claro */
+}
+
 .mentors .mentor .activity .ai {
-    background-color: rgb(86, 53, 129);
+    background-color: rgb(77, 123, 129); /* Azul esverdeado */
 }
+
 .mentors .mentor .activity .sm {
-    background-color: rgb(86, 53, 129);
+    background-color: rgb(129, 60, 40); /* Marrom avermelhado */
 }
+
 .mentors .mentor .activity .sust {
-    background-color: rgb(86, 53, 129);
+    background-color: rgb(96, 129, 53); /* Verde oliva */
 }
 .mentors .mentor .content {
     font-size: 0.9em;
