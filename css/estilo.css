@@ -63,7 +63,6 @@ header {
     z-index: 1000;
     justify-content: space-between;
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    overflow: hidden;
 }
 header:hover {
     background: rgba(40,40,55,0.8);
@@ -116,10 +115,11 @@ header nav ul {
     margin:0;
     padding: 0;
 }
+
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-    padding: 20px 20px;
+    padding: 20px 10px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -164,6 +164,42 @@ header nav ul li a:hover {
 
 header nav ul li a i {
     font-size: 1.3em;
+}
+header nav ul li.submenu {
+    position: relative;
+}
+header nav ul li.submenu::before {
+    content: '\f078' ;
+    font-family: 'Font Awesome 6 Free';
+    position: absolute;
+    font-weight: 900;
+    transform: translateY(-100%) translateX(-50%);
+    top: 95%;
+    left: 50%;
+}
+header nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: rgba(40,40,55,0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    /* width: 100%; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+header nav ul li:hover ul {
+    display: block;
+}
+header nav ul li ul li {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    transition: background-color 0.4s;
+    text-align: center;
 }
 
 .banner {
@@ -749,13 +785,15 @@ footer .logo {
     header {
         flex-direction: column;
         height: 60px;
+        overflow: hidden;
     }
 
     header .logo {
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         width: 100%;
+        gap: 50px;
         padding: 10px 0;
     }
 
@@ -765,8 +803,16 @@ footer .logo {
     header .logo a img {
         height: 30px;
     }
+
     header nav ul {
         justify-content: center;
+    }
+    header nav ul li ul {
+        top: 100%;
+        left: 0;
+        position: static;
+        display: block;
+        flex-direction: row;
     }
 
     header .menu-toggle {
